@@ -1,0 +1,8 @@
+{
+  "Introduction": "0001",
+  "Assignment": "0010",
+  "Presentation": "0100",
+  "Lecture": "1000",
+  "Test": "1100",
+  "Video": "1110"
+}

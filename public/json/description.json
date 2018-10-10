@@ -1,0 +1,133 @@
+{
+  "part1": {
+    "title": "Query String",
+    "description": "To first understand how this can be effective, you need understand the query string and its purpose. The query string is derived of four different parts, placed in order, and seperated by periods. It goes as follows:",
+    "picture": "images/query_string.png",
+    "queryString": {
+      "part1": {
+        "title": "Topic",
+        "description": "The main topic this resource covers"
+      },
+      "part2":{
+        "title": "Sub-Topic",
+        "description": "The subtopic this resource covers"
+      },
+      "part3":{
+        "title": "Class",
+        "description": "The class that this resource occurs"
+      },
+      "part4":{
+        "title": "Instance",
+        "description": "The order this resource occurs if they contain the same topic, subtopic, and class"
+      }
+    }
+  },
+  "part2":{
+    "topics": {
+      "part1": {
+        "title": "01",
+        "description": "HTML"      
+      },
+      "part2": {
+        "title": "02",
+        "description": "CSS"
+      },
+      "part3": {
+        "title": "03",
+        "description": "Javascript"
+      },
+      "part4": {
+        "title": "04",
+        "description": "PHP"
+      },
+      "part5": {
+        "title": "05",
+        "description": "Git/Github"
+      },
+      "part6": {
+        "title": "06",
+        "description": "Internet"
+      },
+      "part7": {
+        "title": "07",
+        "description": "Agile"
+      },
+      "part8": {
+        "title": "08",
+        "description": "Career Development"
+      }
+    },
+    "subTopics": {
+      "part1": {
+        "title": "0001",
+        "description": "Introduction"
+      },
+      "part2": {
+        "title": "0010",
+        "description": "Assignment"
+      },
+      "part3": {
+        "title": "0100",
+        "description": "Presentation"
+      },
+      "part4": {
+        "title": "1000",
+        "description": "Lecture"
+      },
+      "part5": {
+        "title": "1100",
+        "description": "Testing for Understanding"
+      },
+      "part6": {
+        "title": "1110",
+        "description": "Video"
+      }
+    },
+    "classes":{
+      "part1":{
+        "title": "1010",
+        "description": "WEB1010"
+      },
+      "part2":{
+        "title": "1100",
+        "description": "WEB1100"
+      },
+      "part3":{
+        "title": "1000",
+        "description": "COP1000"
+      },
+      "part4":{
+        "title": "2000",
+        "description": "WEB2000"
+      },
+      "part5":{
+        "title": "2020",
+        "description": "WEB2020"
+      },
+      "part6":{
+        "title": "2040",
+        "description": "WEB2040"
+      },
+      "part7":{
+        "title": "1001",
+        "description": "ROR1000"
+      },
+      "part8":{
+        "title": "2001",
+        "description": "ROR2000"
+      },
+      "part9":{
+        "title": "2900",
+        "description": "WEB2900"
+      },
+      "part10":{
+        "title": "2910",
+        "description": "WEB2910"
+      },
+      "part11":{
+        "title": "3000",
+        "description": "WEB3000"
+      }
+    }
+  }
+}

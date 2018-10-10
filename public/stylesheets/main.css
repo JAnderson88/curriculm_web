@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+header h1 {
+  font-family: 'Lalezar', cursive;
+  font-size: 60px;
+}
+
+header .infoNav {
+  background-color: white;
+  border-top: 1px solid black;
+  padding: 0vh 5vw 0vh 5vw;
+  min-height: 10vh;
+  max-height: 10vh;
+  display: flex;
+}
+
+.infoNav span:first-child {
+  border-left: 1px solid black;
+}
+
+.infoNav span {
+  border-right: 1px solid black;
+  font-family: 'Lalezar', cursive;
+  flex: 1;
+  line-height: 10vh;
+}
+
+.infoNav span:hover {
+  cursor: pointer;
+}
+
+#description {
+  font-family: 'Lalezar', cursive;
+  padding: 7vh 12vw 0vh 12vw;
+  font-size: 22px;
+  text-align: center;
+}
+
+#description>* {
+  margin: 4vh 0vw 8vh 0vw;
+}
+
+#description label{
+  font-size: 22px;
+}
+
+#description .img_cont{
+  min-width: 80vw;
+  max-width: 80vw;
+}
+
+#description .img_cont img{
+  width: 100%;
+}
+
+#description textarea{
+  min-height: 40vh;
+  resize: none;
+}
+
+#description h6{
+  color: #9E9E9E !important;
+}
+
+#description #lesson_select,#class_select,#day_select{
+  display: block !important;
+}
+
+.modal_button{
+  margin: 2vh 1.2vw !important;
+}
+
+.table {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table .row {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  min-width: 50vw;
+  max-width: 50vw;
+  display: flex;
+}
+
+.table .row:first-child {
+  border-top: 1px solid black;
+}
+
+.table .row span:first-child {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  flex: 0.5;
+  text-align: center;
+}
+
+.table .row span:last-child {
+  border-bottom: 1px solid black;
+  flex: 1.5;
+  text-align: center;
+}
+
+.tagsContainer{
+  /* border: 1px solid black; */
+  min-width: 500px;
+  max-width: 90vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagsContainer > div{
+  /* border: 1px solid black; */
+  min-width: inherit;
+  max-width: inherit;
+  min-height: 35px;
+  max-height: 10vh;
+  display: flex;
+}
+
+.tagsContainer > div span{
+  border: 1px solid black;
+  min-width: 10vw;
+  max-width: 10vw;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 2vh;
+  vertical-align: center;
+}
+
+.form{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  min-width: 75vw;
+  max-width: 75vw;
+  min-height: auto;
+  max-height: auto;
+}
+
+.form header{
+  border: 1px solid black;
+  text-align: left;
+  padding: 0vh 2vw 0vh 2vw;
+}
+
+.form header *{
+  margin-right: 2vw;
+}
+
+.form .body{
+  max-width: inherit;
+  padding: 0vh 3vw;
+  border-bottom: 1px solid black !important;
+}
+
+.form .body *:not(p){
+  margin-bottom: 8vh;
+}
+
+#modal1{
+  position: fixed !important;
+  display: block !important;
+  top: 10vh !important;
+  z-index: 100;
+}
+
+.hide{
+  display: none;
+}
