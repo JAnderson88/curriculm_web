@@ -256,6 +256,9 @@ class App {
   }
 
   getTags() {
+    if(localStorage.getItem("tagslist") !== null){
+      return this.displayTags();
+    }
     this.fetchData("/get-tags", data => {
       const tags = Object.keys(JSON.parse(data)).sort();
       localStorage["tagslist"] = tags;
@@ -263,8 +266,10 @@ class App {
   }
 
   displayTags() {
+    if(localStorage.getItem("tagslist") === null){
+      this.getTags();
+    }
     const tags = localStorage.getItem("tagslist").split(',');
-    console.log(tags);
     desc.innerHTML = "";
     const tagsContainer = document.createElement("div");
     tagsContainer.classList = "tagsContainer";
@@ -578,7 +583,7 @@ function main() {
   intro.addEventListener("click", init.grabIntroduction.bind(init));
   docu.addEventListener("click", init.grabDocumentation.bind(init));
   form.addEventListener("click", e => { init.createLessonForm(desc); });
-  tag.addEventListener("click", init.displayTags.bind(init));
+  tag.addEventListener("click", init.getTags.bind(init));
   init.grabIntroduction();
 }
 
