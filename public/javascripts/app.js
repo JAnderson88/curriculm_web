@@ -206,18 +206,10 @@ class App {
         localStorage.clear();
         localStorage["tagsList"] = tagsList;
         localStorage["lastLessonSubimisson"] = JSON.parse(data).qString;
-        this.createLessonForm(desc);
+        this.createLessonForm(desc); 
+        return;
       }
-      if (JSON.parse(data).code > 1 && JSON.parse(data).code <= 6) {
-        console.error("There was an error on your submission of this lesson");
-        console.warn(JSON.parse(data).res);
-        localStorage["tempQString"] = JSON.parse(data).qString;
-      }
-      if (JSON.parse(data).code > 6) {
-        console.error("There was an error on your submission of this lesson");
-        console.error(JSON.parse(data).res);
-        localStorage["tempQString"] = JSON.parse(data).qString;
-      }
+      console.log("There was an error submitting the lesson.");
     })
   }
 
