@@ -336,18 +336,37 @@ class App {
       this.collectInputData(tags.id, tags.name, "value");
     });
     tags.addEventListener("keyup", e => {
+      const autoComplete = document.querySelector(".auto_complete")
+      if(autoComplete){
+        desc.removeChild(autoComplete);
+      }
+      const tagsWidth = tags.offsetWidth;
+      const tagsTop = tags.offsetTop;
+      const tagsLeft = tags.offsetLeft;
       if (localStorage["tagslist"] !== null) {
         const tagsList = localStorage.getItem("tagslist").split(',');
         const currentTags = tags.value.split(',');
-        const match = tagsList.filter((tag,index) => {
-          if(index === currentTags.length - 1){
-            const regex = new RegExp(currentTags[currentTags.length -1], 'gi');
-            if(tagsList.match(regex)){
+        if(currentTags[currentTags.length-1].length >= 3){
+          const match = tagsList.filter(tag => {
+            if(tag.includes(currentTags[currentTags.length-1].substring(1).toLowerCase())){
               return tag;
             }
+          });
+          if(match.length > 0){
+            const autoComplete = document.createElement("div");
+            const topOffset = window.innerHeight * 0.09;
+            autoComplete.classList = "auto_complete";
+            autoComplete.style.top = (tagsTop - topOffset) + "px";
+            autoComplete.style.left = tagsLeft + "px";
+            autoComplete.style.width = tagsWidth + "px";
+            match.forEach(tag => {
+              const span = document.createElement("span");
+              span.textContent = tag;
+              autoComplete.appendChild(span);
+            });
+            desc.appendChild(autoComplete);
           }
-        });
-        console.log(match);
+        }
       }
     });
 
@@ -578,13 +597,11 @@ class App {
 }
 
 //add event listeners and call functions
-function main() {
+(function() {
   const init = new App();
   intro.addEventListener("click", init.grabIntroduction.bind(init));
   docu.addEventListener("click", init.grabDocumentation.bind(init));
   form.addEventListener("click", e => { init.createLessonForm(desc); });
   tag.addEventListener("click", init.getTags.bind(init));
   init.grabIntroduction();
-}
-
-main();
+})();
